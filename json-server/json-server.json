@@ -1,0 +1,6 @@
+{
+  "watch": true,
+  "port": 5000,
+  "middlewares": ["json-server/middleware.js"],
+  "routes": "json-server/routes.json"
+}
