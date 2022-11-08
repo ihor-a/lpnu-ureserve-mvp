@@ -1,7 +1,7 @@
 import React from 'react';
 import {SimpleForm, TextInput} from "react-admin";
 
-const CityEntity = (props) => {
+const CityEntity = () => {
 
     return (
         <SimpleForm>
