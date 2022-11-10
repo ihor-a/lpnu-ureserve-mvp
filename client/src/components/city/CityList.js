@@ -1,5 +1,5 @@
 import React from 'react'
-import {List, Datagrid, TextField, EditButton, SearchInput} from 'react-admin'
+import {List, Datagrid, TextField, EditButton, SearchInput, UrlField} from 'react-admin'
 
 const CityList = (props) => {
 
@@ -12,6 +12,7 @@ const CityList = (props) => {
             <Datagrid>
                 <TextField source='id' />
                 <TextField source='name' />
+                <UrlField source="name" />
                 <EditButton basePath='/cities' />
             </Datagrid>
         </List>
