@@ -10,7 +10,6 @@ const OrderList = (props) => {
                 <TextField source='date' />
                 <SelectField source="coworkings_id" choices={data} optionText='title' />
                 <TextField source='number_seats' />
-                <EditButton basePath='/orders' />
             </Datagrid>
         </List>
     )

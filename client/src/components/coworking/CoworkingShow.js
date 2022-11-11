@@ -2,11 +2,17 @@ import React from 'react';
 import {
     Show, SimpleShowLayout, TabbedShowLayout, Tab,
     TextField, RichTextField, NumberField,
-    useGetOne, useGetRecordId, useCreate, useNotify, CreateBase, SimpleForm, TextInput, ImageField
+    useGetOne, useGetRecordId, useCreate, useNotify, CreateBase, SimpleForm, TextInput
 } from 'react-admin';
-import { CardMedia, Card, Rating } from '@mui/material';
+import {CardMedia, Card, Rating, Typography} from '@mui/material';
 import { Grid } from "@material-ui/core";
 import OrderEntity from "../order/OrderEntity";
+import WifiIcon from "@mui/icons-material/Wifi";
+import TvIcon from "@mui/icons-material/Tv";
+import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import KitchenIcon from "@mui/icons-material/Kitchen";
+import MicrowaveIcon from "@mui/icons-material/Microwave";
 
 const CoworkingShow = () => {
     // Because of useRecordContext() bug we have to use record manually
@@ -52,6 +58,10 @@ const CoworkingShow = () => {
                                 <TextField source="title" />
                                 <RichTextField source="description" />
                                 <NumberField source="price" options={{ style: 'currency', currency: 'UAH' }} />
+                                <Typography>
+                                    <WifiIcon/>Wi-Fi <TvIcon/> TV <MeetingRoomIcon/> Meeting Room
+                                    <RestaurantIcon/> Restaurant <KitchenIcon/> Kitchen <MicrowaveIcon/> Microwave
+                                </Typography>
                             </SimpleShowLayout>
                         </Grid>
                         <Grid item xs={12}>
