@@ -1,12 +1,10 @@
 import { Admin, Resource } from 'react-admin'
-// import { Route } from "react-router-dom";
 import UploadPictureDataProvider from "./components/UploadPictureDataProvider";
 import PlaceIcon from '@mui/icons-material/Place';
 import BusinessIcon from '@mui/icons-material/Business';
 import MapIcon from '@mui/icons-material/Map';
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
-// import LocationCityIcon from '@mui/icons-material/LocationCity';
-// import ListAltIcon from '@mui/icons-material/ListAlt';
+import ListAltIcon from '@mui/icons-material/ListAlt';
 
 import CityList from "./components/city/CityList";
 import CityCreate from "./components/city/CityCreate";
@@ -19,7 +17,7 @@ import CoworkingCreate from "./components/coworking/CoworkingCreate";
 import CoworkingEdit from "./components/coworking/CoworkingEdit";
 import CoworkingShow from "./components/coworking/CoworkingShow";
 import LookCoworkingList from "./components/coworking/LookCoworkingList";
-// import CoworkingReserve from "./components/coworking/CoworkingReserve";
+import OrderList from "./components/order/OrderList";
 
 function App() {
     return (
@@ -48,9 +46,10 @@ function App() {
                 name='look-coworkings' icon={BookOnlineIcon} options={{ label: 'Look for Coworking' }}
                 list={LookCoworkingList}
             />
-            {/*<CustomRoutes>*/}
-            {/*    <Route path="/coworkingreserve" element={<CoworkingReserve />} />*/}
-            {/*</CustomRoutes>*/}
+            <Resource
+                name='orders' icon={ListAltIcon} options={{ label: 'My Orders' }}
+                list={OrderList}
+            />
         </Admin>
         </div>
     );

@@ -1,5 +1,14 @@
 import React from 'react'
-import { List, Datagrid, TextField, ReferenceField, SearchInput, useListContext } from 'react-admin'
+import {
+    List,
+    Datagrid,
+    TextField,
+    ReferenceField,
+    SearchInput,
+    SelectInput,
+    useListContext,
+    useGetList
+} from 'react-admin'
 import { CardMedia, Card, CardActionArea, CardContent, CardHeader } from '@mui/material';
 import { Link } from 'react-router-dom';
 import WifiIcon from '@mui/icons-material/Wifi';
@@ -17,7 +26,7 @@ const cardStyle = {
     verticalAlign: 'top'
 };
 const CoworkingCardGrid = () => {
-    let { data } = useListContext();
+    const { data } = useListContext();
     // Workaround for bug with undefined data
     if (typeof data === 'undefined') {
         return (<Datagrid/>);
@@ -49,9 +58,11 @@ const CoworkingCardGrid = () => {
 };
 
 const CoworkingList = (props) => {
-
+    const { data } = useGetList('cities');
     const coworkingFilters = [
         <SearchInput source="title" alwaysOn />,
+        // TODO Implement search by city on backend side
+        <SelectInput source="locations_id" choices={data} alwaysOn label="City" />
     ];
 
     return (

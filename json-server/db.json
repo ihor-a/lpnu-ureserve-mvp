@@ -1,81 +1,43 @@
 {
   "cities": [
     {
-      "id": "KIE",
+      "id": 1,
       "name": "Київ"
     },
     {
-      "id": "DNI",
+      "id": 2,
       "name": "Дніпро"
     },
     {
-      "id": "ODE",
+      "id": 3,
+      "name": "Львів"
+    },
+    {
+      "id": 4,
       "name": "Одеса"
     },
     {
-      "id": "KHA",
+      "id": 5,
       "name": "Харків"
     },
     {
-      "id": "IVF",
+      "id": 6,
       "name": "Івано-Франківськ"
-    },
-    {
-      "id": "LVI",
-      "name": "Львів"
     }
   ],
   "orders": [
     {
-      "date": "2022-11-01",
-      "number_seats": "1",
+      "date": "2022-11-18",
+      "number_seats": "11",
       "coworkings_id": 1,
-      "id": 1
+      "id": 9
     },
     {
-      "date": "2022-11-10",
-      "number_seats": "3",
-      "coworkings_id": 1,
-      "id": 2
-    },
-    {
-      "date": "2022-11-10",
-      "number_seats": "1",
-      "message": "rrr",
-      "coworkings_id": 1,
-      "id": 3
-    },
-    {
-      "date": "2022-11-10",
+      "date": "2022-11-23",
       "number_seats": "2",
+      "message": "My cool msg",
       "coworkings_id": 2,
-      "id": 4
-    },
-    {
-      "date": "2022-11-10",
-      "number_seats": "2",
-      "coworkings_id": 2,
-      "id": 5
-    },
-    {
-      "date": "2022-11-10",
-      "number_seats": "2",
-      "coworkings_id": 2,
-      "id": 6
-    },
-    {
-      "date": "2022-11-17",
-      "number_seats": "1",
-      "message": "Hello2",
-      "coworkings_id": 1,
-      "id": 7
-    },
-    {
-      "date": "2022-11-12",
-      "number_seats": "1",
-      "message": "Hello 33",
-      "coworkings_id": 2,
-      "id": 8
+      "id": 10
     }
   ],
   "locations": [

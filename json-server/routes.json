@@ -2,6 +2,6 @@
   "/:resource\\?filter=%7B%22title%22%3A%22:title%22%7D&*": "/:resource?title_like=:title",
   "/:resource\\?filter=%7B%22name%22%3A%22:name%22%7D&*": "/:resource?name_like=:name",
   "/:resource\\?filter=%7B%22cities_id%22%3A%22:cities_id%22%7D&*": "/:resource?cities_id=:cities_id",
-  "/:resource\\?filter=%7B%22locations_id%22%3A%22:locations_id%22%7D&*": "/:resource?locations_id=:locations_id",
+  "/:resource\\?filter=%7B%22locations_id%22%3A:locations_id%7D&*": "/:resource?locations_id=:locations_id",
   "/look-coworkings*": "/coworkings$1"
 }
