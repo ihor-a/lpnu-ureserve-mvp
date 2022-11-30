@@ -1,12 +1,15 @@
 import React from 'react'
-import {useGetList, List, Datagrid, TextField, SelectField, ImageField, EditButton, SearchInput} from 'react-admin'
+import {useGetList, List, Datagrid, TextField, SelectField, ImageField, EditButton, SearchInput, SelectInput} from 'react-admin'
 
 const LocationList = (props) => {
     const { data } = useGetList('cities');
+    if (typeof data === 'undefined') {
+        return <Datagrid/>
+    }
 
     const locationFilters = [
         <SearchInput source="title" alwaysOn />,
-        // <SelectInput source="cities_id" choices={data} alwaysOn />
+        <SelectInput source="cities_id" choices={data} alwaysOn />
     ];
 
     return (

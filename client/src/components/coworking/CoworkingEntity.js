@@ -17,7 +17,7 @@ const CoworkingEntity = (props) => {
             </ReferenceInput>
             <TextInput source='price' />
             <RichTextInput source='description' validate={required()} />
-            <ImageInput source="pictures" required label="Coworking Picture" multiple={true}>
+            <ImageInput source="pictures" validate={required()} label="Coworking Picture" multiple={true}>
                 <ImageField source="src" title="title" />
             </ImageInput>
         </SimpleForm>

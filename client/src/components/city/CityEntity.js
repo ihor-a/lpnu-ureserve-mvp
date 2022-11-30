@@ -1,11 +1,15 @@
 import React from 'react';
 import {SimpleForm, TextInput} from "react-admin";
 
-const CityEntity = () => {
+const CityEntity = (props) => {
+    let idField = '';
+    if (props.isEditMode === true) {
+        idField = <TextInput disabled source='id' />;
+    }
 
     return (
         <SimpleForm>
-            <TextInput source='id' />
+            {idField}
             <TextInput source='name' required style={{width: '50%'}} />
         </SimpleForm>
     );

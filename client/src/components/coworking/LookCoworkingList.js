@@ -59,6 +59,9 @@ const CoworkingCardGrid = () => {
 
 const CoworkingList = (props) => {
     const { data } = useGetList('cities');
+    if (typeof data === 'undefined') {
+        return <Datagrid/>
+    }
     const coworkingFilters = [
         <SearchInput source="title" alwaysOn />,
         // TODO Implement search by city on backend side

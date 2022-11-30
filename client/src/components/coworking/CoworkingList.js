@@ -1,12 +1,15 @@
 import React from 'react'
-import {useGetList, List, Datagrid, TextField, SelectField, ImageField, EditButton, SearchInput} from 'react-admin'
+import {useGetList, List, Datagrid, TextField, SelectField, ImageField, EditButton, SearchInput, SelectInput} from 'react-admin'
 
 const CoworkingList = (props) => {
     const { data } = useGetList('locations');
+    if (typeof data === 'undefined') {
+        return <Datagrid/>
+    }
 
     const coworkingFilters = [
         <SearchInput source="title" alwaysOn />,
-        // <SelectInput source="locations_id" choices={data} optionText='title' alwaysOn />
+        <SelectInput source="locations_id" choices={data} optionText='title' alwaysOn />
     ];
 
     return (
